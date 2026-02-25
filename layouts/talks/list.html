@@ -1,0 +1,77 @@
+{{ define "main" }}
+<div class="container">
+
+    {{ $pages := .Pages }}
+    {{ $upcoming := where $pages "Date" "ge" now }}
+    {{ $past := where $pages "Date" "lt" now }}
+
+    <h2>Upcoming Talks</h2>
+    <div class="upcoming-list">
+    {{ range $upcoming.Reverse }}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">{{ .Date.Format "Monday, 2 January 2006" }}</h3>
+                
+                {{ if .Params.location }}
+                <p class="card-text mb-3">
+                    <strong>Location:</strong> 
+                    {{ if .Params.location_url }}
+                        <a href="{{ .Params.location_url }}" target="_blank" rel="noopener">{{ .Params.location }}</a>
+                    {{ else }}
+                        {{ .Params.location }}
+                    {{ end }}
+                </p>
+                {{ end }}
+
+                {{ with .Params.speakers }}
+                <div class="speakers">
+                    <h4>Speaker(s):</h4>
+                    <ul>
+                    {{ range . }}
+                        <li>
+                            {{ if .url }}
+                                <strong><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></strong>
+                            {{ else }}
+                                <strong>{{ .name }}</strong>
+                            {{ end }}
+                            : {{ .topic | markdownify }}
+                        </li>
+                    {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    {{ else }}
+        <p>No upcoming talks scheduled.</p>
+    {{ end }}
+    </div>
+
+    <hr>
+
+    <h2>Previous Talks</h2>
+    <div class="past-list">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Presenters & Topics</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{ range $past }}
+                <tr>
+                    <td>{{ .Date.Format "2006-01-02" }}</td>
+                    <td>
+                        {{ range $index, $element := .Params.speakers }}
+                            {{ if $index }}<br>{{ end }}
+                            <strong>{{ .name }}</strong>: {{ .topic | markdownify }}
+                        {{ end }}
+                    </td>
+                </tr>
+            {{ end }}
+            </tbody>
+        </table>
+    </div>
+</div>
+{{ end }}

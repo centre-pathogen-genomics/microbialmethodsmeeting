@@ -1,0 +1,27 @@
+baseURL: 'https://username.github.io/mmmmm_website/'
+languageCode: 'en-us'
+title: 'Melbourne Monthly Microbial Methods Meeting'
+theme: 'paige'
+
+menu:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 1
+    - name: 'Talks'
+      url: '/talks/'
+      weight: 2
+
+params:
+  title: 'Melbourne Monthly Microbial Methods Meeting'
+  description: 'Sharing microbial methods in Melbourne.'
+  paige:
+    site:
+      disable_credit: true
+      disable_breadcrumbs: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+buildFuture: true
