@@ -47,6 +47,10 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
       - name: Build with Hugo
         env:
           # For maximum reproducibility, ensure the same Hugo version is used as in local dev if possible

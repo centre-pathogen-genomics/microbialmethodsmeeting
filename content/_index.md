@@ -23,5 +23,5 @@ paige:
 </div>
 
 <div style="text-align: center;">
-    <p><a href="https://example.com/signup" class="btn btn-primary" target="_blank" rel="noopener">Sign up for our mailing list here</a></p>
+    <p><a href="https://lists.unimelb.edu.au/info/microbialmethodsmeeting" class="btn btn-primary" target="_blank" rel="noopener">Sign up for our mailing list here</a></p>
 </div>

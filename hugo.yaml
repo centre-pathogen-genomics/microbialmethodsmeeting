@@ -1,4 +1,4 @@
-baseURL: 'https://username.github.io/mmmmm_website/'
+baseURL: 'https://microbialmethodsmeeting.cpg.org.au/'
 languageCode: 'en-us'
 title: 'Melbourne Monthly Microbial Methods Meeting'
 theme: 'paige'
@@ -19,6 +19,7 @@ params:
     site:
       disable_credit: true
       disable_breadcrumbs: true
+      color_scheme: "light"
 
 markup:
   goldmark:
