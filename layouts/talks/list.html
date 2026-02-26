@@ -10,35 +10,38 @@
     {{ range $upcoming.Reverse }}
         <div class="card mb-3">
             <div class="card-body">
-                <h3 class="card-title">{{ .Date.Format "Monday, 2 January 2006" }}</h3>
-                
-                {{ if .Params.location }}
-                <p class="card-text mb-3">
-                    <strong>Location:</strong> 
-                    {{ if .Params.location_url }}
-                        <a href="{{ .Params.location_url }}" target="_blank" rel="noopener">{{ .Params.location }}</a>
-                    {{ else }}
-                        {{ .Params.location }}
-                    {{ end }}
-                </p>
-                {{ end }}
-
                 {{ with .Params.speakers }}
-                <div class="speakers">
-                    <h4>Speaker(s):</h4>
-                    <ul>
+                <div class="speakers mb-3">
+                    <ul class="list-unstyled mb-0">
                     {{ range . }}
-                        <li>
-                            {{ if .url }}
-                                <strong><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></strong>
-                            {{ else }}
-                                <strong>{{ .name }}</strong>
-                            {{ end }}
-                            : {{ .topic | markdownify }}
+                        <li class="mb-2">
+                            <h3 class="card-title mb-1">
+                                {{ if .url }}
+                                    <a href="{{ .url }}" target="_blank" rel="noopener" class="text-decoration-none text-reset">{{ .name }}</a>
+                                {{ else }}
+                                    {{ .name }}
+                                {{ end }}
+                            </h3>
+                            <h4 class="card-subtitle text-body-secondary">{{ .topic | markdownify }}</h4>
                         </li>
                     {{ end }}
                     </ul>
                 </div>
+                {{ end }}
+
+                <h5 class="mb-2">
+                    {{ .Date.Format "Monday, 2 January 2006" }}
+                </h5>
+                
+                {{ if .Params.location }}
+                <p class="card-text text-muted small">
+                    <i class="bi bi-geo-alt-fill"></i> 
+                    {{ if .Params.location_url }}
+                        <a href="{{ .Params.location_url }}" target="_blank" rel="noopener" class="text-muted">{{ .Params.location }}</a>
+                    {{ else }}
+                        {{ .Params.location }}
+                    {{ end }}
+                </p>
                 {{ end }}
             </div>
         </div>
@@ -51,23 +54,24 @@
 
     <h2>Previous Talks</h2>
     <div class="past-list">
-        <table class="table">
+        <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Presenters & Topics</th>
+                    <th scope="col" style="width: 70%;">Presenters & Topics</th>
+                    <th scope="col" style="width: 30%;">Date</th>
                 </tr>
             </thead>
             <tbody>
             {{ range $past }}
                 <tr>
-                    <td>{{ .Date.Format "2006-01-02" }}</td>
                     <td>
                         {{ range $index, $element := .Params.speakers }}
                             {{ if $index }}<br>{{ end }}
-                            <strong>{{ .name }}</strong>: {{ .topic | markdownify }}
+                            <strong>{{ .name }}</strong><br>
+                            <span class="text-muted">{{ .topic | markdownify }}</span>
                         {{ end }}
                     </td>
+                    <td class="align-middle text-muted">{{ .Date.Format "2006-01-02" }}</td>
                 </tr>
             {{ end }}
             </tbody>

@@ -4,8 +4,8 @@ location: "TBA"
 location_url: ""
 speakers:
   - name: "Jiadong Mao"
-    url: ""
-    topic: "TBA"
+    url: "https://findanexpert.unimelb.edu.au/profile/737508-jiadong-mao"
+    topic: "Causal inference in microbiome research - [paper](https://www.biorxiv.org/content/10.64898/2025.12.26.696613v1)"
 
 ---
 
