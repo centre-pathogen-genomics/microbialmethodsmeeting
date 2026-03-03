@@ -1,7 +1,7 @@
 ---
-date: 2026-03-19T13:00:00+11:00
+date: 2026-03-19T14:00:00+11:00
 location: "Doherty seminar room GM003"
-location_url: "https://maps.unimelb.edu.au/search?q=Doherty++Institute+G003&campusid=0"
+location_url: "https://maps.unimelb.edu.au/point?poi=705309"
 speakers:
   - name: "Stefano Giulieri"
     url: "https://www.doherty.edu.au/staff-member/stefano-giulieri/"

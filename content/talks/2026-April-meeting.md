@@ -1,7 +1,7 @@
 ---
 date: 2026-04-30T13:00:00+11:00
-location: "GM002 in Doherty"
-location_url: ""
+location: "Doherty seminar room GM002"
+location_url: "https://maps.unimelb.edu.au/point?poi=705309"
 speakers:
   - name: "Jiadong Mao"
     url: "https://findanexpert.unimelb.edu.au/profile/737508-jiadong-mao"
