@@ -25,3 +25,7 @@ paige:
 <div style="text-align: center;">
     <p><a href="https://lists.unimelb.edu.au/info/microbialmethodsmeeting" class="btn btn-primary" target="_blank" rel="noopener">Sign up for our mailing list here</a></p>
 </div>
+
+<!-- <div style="text-align: center; font-size: 0.9rem; color: #777; margin-top: 3rem;">
+    <p>Organisers: Gerry Tonkin-Hill, Stefano Giulieri and Isabella Stitt</p>
+</div> -->

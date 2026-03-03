@@ -1,6 +1,6 @@
 ---
 date: 2026-04-30T13:00:00+11:00
-location: "TBA"
+location: "GM002 in Doherty"
 location_url: ""
 speakers:
   - name: "Jiadong Mao"
