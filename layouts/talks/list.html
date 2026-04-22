@@ -15,14 +15,15 @@
                     <ul class="list-unstyled mb-0">
                     {{ range . }}
                         <li class="mb-2">
-                            <h3 class="card-title mb-1">
+                            <p class="fs-4 fw-semibold mb-1">
                                 {{ if .url }}
                                     <a href="{{ .url }}" target="_blank" rel="noopener" class="text-decoration-none text-reset">{{ .name }}</a>
                                 {{ else }}
                                     {{ .name }}
                                 {{ end }}
-                            </h3>
-                            <h4 class="card-subtitle text-body-secondary">{{ .topic | markdownify }}</h4>
+                                {{ with .affiliation }}<span class="fs-6 fw-normal text-muted">&nbsp;&middot;&nbsp;{{ . }}</span>{{ end }}
+                            </p>
+                            <p class="fs-5 text-body-secondary mb-0">{{ .topic | markdownify }}</p>
                         </li>
                     {{ end }}
                     </ul>
@@ -67,7 +68,7 @@
                     <td>
                         {{ range $index, $element := .Params.speakers }}
                             {{ if $index }}<br>{{ end }}
-                            <strong>{{ .name }}</strong><br>
+                            <strong>{{ .name }}</strong>{{ with .affiliation }}<span class="text-muted">&nbsp;&middot;&nbsp;{{ . }}</span>{{ end }}<br>
                             <span class="text-muted">{{ .topic | markdownify }}</span>
                         {{ end }}
                     </td>

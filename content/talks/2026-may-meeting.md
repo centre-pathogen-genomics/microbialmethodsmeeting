@@ -4,6 +4,7 @@ location: "Alan Gilbert - PAR-105-L2-206-Lectorial Learning Space"
 location_url: "https://maps.unimelb.edu.au/point?poi=705309"
 speakers:
   - name: "André Kahles"
+    affiliation: "ETH Zurich"
     url: "https://bmi.inf.ethz.ch/people/person/andre-kahles"
     topic: "Succinct graph and K-mer indexing methods"
 
