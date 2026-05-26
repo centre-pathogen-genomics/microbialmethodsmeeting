@@ -1,5 +1,5 @@
 ---
-date: 2026-06-2T12:00:00+11:00
+date: 2026-06-25T12:00:00+11:00
 location: "TBA"
 location_url: ""
 speakers:
