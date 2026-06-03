@@ -1,6 +1,6 @@
 ---
 date: 2026-06-25T12:00:00+11:00
-location: "TBA"
+location: "GM002 Seminar Room, Doherty Institute"
 location_url: ""
 speakers:
   - name: "Jane Hawkey"
