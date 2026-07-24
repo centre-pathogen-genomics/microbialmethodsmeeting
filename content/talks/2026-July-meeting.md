@@ -1,6 +1,6 @@
 ---
 date: 2026-08-03T15:00:00+11:00
-location: "GM002 Seminar Room, Doherty Institute"
+location: "GM003 Seminar Room, Doherty Institute"
 location_url: ""
 speakers:
   - name: "Danielle Ingle"
